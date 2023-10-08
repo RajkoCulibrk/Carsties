@@ -10,6 +10,7 @@ namespace SearchService.Data
     {
         public static async Task InitDb(WebApplication app)
         {
+            var kurac = app.Configuration.GetConnectionString("MongoDbConnection");
             await DB.InitAsync(
                 "SearchDb",
                 MongoClientSettings

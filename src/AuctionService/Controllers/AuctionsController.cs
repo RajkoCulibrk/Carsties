@@ -6,7 +6,6 @@ using AutoMapper.QueryableExtensions;
 using Contracts;
 using MassTransit;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
