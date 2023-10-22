@@ -54,6 +54,7 @@ namespace AuctionService.Controllers
         public async Task<ActionResult<AuctionDto>> GetAuctionById(Guid id)
         {
             var auction = await _context.Auctions
+                .Include(a=>a.Item)
                 .FirstOrDefaultAsync(x => x.Id == id);
 
             if(auction == null)

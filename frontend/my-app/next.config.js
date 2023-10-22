@@ -8,7 +8,9 @@ const nextConfig = {
     },
     images:{
         domains:[
-            "cdn.pixabay.com"
+            "cdn.pixabay.com",
+            "media.autoexpress.co.uk",
+            "imgd-ct.aeplcdn.com",
         ]
     }
 }

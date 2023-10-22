@@ -2,11 +2,14 @@
 import { useParamsStore } from '@/hooks/useParamsStore'
 import React, { useState } from 'react'
 import {FaSearch} from "react-icons/fa"
+import {usePathname, useRouter} from "next/navigation";
 
 const Search = () => {
     const setParams = useParamsStore(state=>state.setParams)
     const setSearchValue = useParamsStore(state=>state.setSearchValue)
     const searchValue = useParamsStore(state=>state.searchValue)
+    const pathname = usePathname()
+    const router = useRouter()
 
     function onChange (e: React.ChangeEvent<HTMLInputElement>){
         setSearchValue(e.target.value)
@@ -19,6 +22,7 @@ const Search = () => {
     }
 
     function search(){
+        if(pathname !== "/") router.push("/")
         setParams({
             searchTerm:searchValue
         })

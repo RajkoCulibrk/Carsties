@@ -11,7 +11,7 @@ const renderer = ({ days , hours, minutes, seconds, completed }:{ days:number, h
          {completed ? (
             <span>Auction finished</span>
          ) : (
-            <span suppressHydrationWarning={true} >{zeroPad(days)}:{zeroPad(hours)}:{zeroPad(minutes)}:{zeroPad(seconds)}: </span>
+            <span suppressHydrationWarning={true} >{zeroPad(days)}:{zeroPad(hours)}:{zeroPad(minutes)}:{zeroPad(seconds)} </span>
          )}
     </div>
   };
