@@ -20,8 +20,8 @@ services:
       RESHARPER_LOG_CONF: "/riderLogsConf/backend-log.xml"
     image: "rajko1993/auction-svc:dev"
     ports:
-    - "127.0.0.1:57008:57100"
-    - "127.0.0.1:57208:57300"
+    - "127.0.0.1:57028:57100"
+    - "127.0.0.1:57228:57300"
     volumes:
     - "C:\\Users\\rajko\\.nuget\\packages:/root/.nuget/fallbackpackages"
     - "C:\\Users\\rajko\\Documents\\UCENJE\\dotNET\\Carsties\\src\\AuctionService:/app:rw"
@@ -30,7 +30,7 @@ services:
       Linux64:/riderDebugger"
     - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.2.2/bin:/riderLogsConf"
     - "C:\\Users\\rajko\\AppData\\Local\\JetBrains\\Rider2023.2\\log\\DebuggerWorker\\\
-      JetBrains.Debugger.Worker.2023_10_22_20_07_06:/riderLogs:rw"
+      JetBrains.Debugger.Worker.2023_10_24_23_35_45:/riderLogs:rw"
     working_dir: "/app"
   gateway-svc:
     build:
@@ -52,8 +52,8 @@ services:
       RESHARPER_LOG_CONF: "/riderLogsConf/backend-log.xml"
     image: "rajko1993/gateway-svc:dev"
     ports:
-    - "127.0.0.1:57009:57100"
-    - "127.0.0.1:57209:57300"
+    - "127.0.0.1:57029:57100"
+    - "127.0.0.1:57229:57300"
     volumes:
     - "C:\\Users\\rajko\\.nuget\\packages:/root/.nuget/fallbackpackages"
     - "C:\\Users\\rajko\\Documents\\UCENJE\\dotNET\\Carsties\\src\\GatewayService:/app:rw"
@@ -62,7 +62,7 @@ services:
       Linux64:/riderDebugger"
     - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.2.2/bin:/riderLogsConf"
     - "C:\\Users\\rajko\\AppData\\Local\\JetBrains\\Rider2023.2\\log\\DebuggerWorker\\\
-      JetBrains.Debugger.Worker.2023_10_22_20_07_06:/riderLogs:rw"
+      JetBrains.Debugger.Worker.2023_10_24_23_35_45:/riderLogs:rw"
     working_dir: "/app"
   identity-svc:
     build:
@@ -85,8 +85,8 @@ services:
       RESHARPER_LOG_CONF: "/riderLogsConf/backend-log.xml"
     image: "rajko1993/identity-svc:dev"
     ports:
-    - "127.0.0.1:57010:57100"
-    - "127.0.0.1:57210:57300"
+    - "127.0.0.1:57030:57100"
+    - "127.0.0.1:57230:57300"
     volumes:
     - "C:\\Users\\rajko\\.nuget\\packages:/root/.nuget/fallbackpackages"
     - "C:\\Users\\rajko\\Documents\\UCENJE\\dotNET\\Carsties\\src\\IdentityService:/app:rw"
@@ -95,7 +95,7 @@ services:
       Linux64:/riderDebugger"
     - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.2.2/bin:/riderLogsConf"
     - "C:\\Users\\rajko\\AppData\\Local\\JetBrains\\Rider2023.2\\log\\DebuggerWorker\\\
-      JetBrains.Debugger.Worker.2023_10_22_20_07_06:/riderLogs:rw"
+      JetBrains.Debugger.Worker.2023_10_24_23_35_45:/riderLogs:rw"
     working_dir: "/app"
   search-svc:
     build:
@@ -117,8 +117,8 @@ services:
       RESHARPER_LOG_CONF: "/riderLogsConf/backend-log.xml"
     image: "rajko1993/search-svc:dev"
     ports:
-    - "127.0.0.1:57011:57100"
-    - "127.0.0.1:57211:57300"
+    - "127.0.0.1:57031:57100"
+    - "127.0.0.1:57231:57300"
     volumes:
     - "C:\\Users\\rajko\\.nuget\\packages:/root/.nuget/fallbackpackages"
     - "C:\\Users\\rajko\\Documents\\UCENJE\\dotNET\\Carsties\\src\\SearchService:/app:rw"
@@ -127,5 +127,5 @@ services:
       Linux64:/riderDebugger"
     - "C:\\Program Files\\JetBrains\\JetBrains Rider 2023.2.2/bin:/riderLogsConf"
     - "C:\\Users\\rajko\\AppData\\Local\\JetBrains\\Rider2023.2\\log\\DebuggerWorker\\\
-      JetBrains.Debugger.Worker.2023_10_22_20_07_06:/riderLogs:rw"
+      JetBrains.Debugger.Worker.2023_10_24_23_35_45:/riderLogs:rw"
     working_dir: "/app"

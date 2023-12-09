@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:7.0 as build
+﻿FROM mcr.microsoft.com/dotnet/sdk:7.0 as build
 WORKDIR /app
 EXPOSE 80
 
@@ -12,14 +12,14 @@ COPY src/IdentityService/IdentityService.csproj src/IdentityService/IdentityServ
 
 RUN dotnet restore Carsties.sln
 
-COPY src/AuctionService src/AuctionService
+COPY src/BiddingService src/BiddingService
 COPY src/Contracts src/Contracts
 
-WORKDIR /app/src/AuctionService
+WORKDIR /app/src/BiddingService
 
 RUN dotnet publish -c Release -o /app/src/out
 
 FROM mcr.microsoft.com/dotnet/aspnet:7.0
 WORKDIR /app
 COPY --from=build /app/src/out .
-ENTRYPOINT ["dotnet", "AuctionService.dll"]
+ENTRYPOINT ["dotnet", "BiddingService.dll"]
